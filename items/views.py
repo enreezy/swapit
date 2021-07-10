@@ -15,10 +15,6 @@ from categories.models import Category
 
 class ItemView(APIView):
     def post(self, request):
-        request.data["user"] = User.objects.get(id=request.data["user"]).id
-        request.data["category"] = Category.objects.get(
-            id=request.data["category"]).id
-
         serializer = ItemSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'comments',
     'categories',
     'posts',
+    'chats',
     'rest_framework',
     'corsheaders'
 ]
